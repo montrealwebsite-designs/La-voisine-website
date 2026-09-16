@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#18372d">
+  <meta name="description" content="Entrez chez La Voisine, restaurant à Saint-Bruno-de-Montarville. Découvrez le menu, réservez une table et retrouvez-nous.">
+  <title>La Voisine — Restaurant à Saint-Bruno</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318372d'/%3E%3Crect x='3' y='3' width='26' height='26' rx='4' fill='none' stroke='%23c9b88b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia' font-size='25' fill='%23f3ecdc'%3EV%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <nav class="navigation" aria-label="Navigation principale">
+    <button data-open="menu">Menu</button><span aria-hidden="true">|</span>
+    <a href="https://booking.libroreserve.com/17721363282316f12bdd3/QC017721363289C8FD6/seat" target="_blank" rel="noopener">Réserver</a><span aria-hidden="true">|</span>
+    <button data-open="contact">Contact</button>
+  </nav>
+  <main>
+    <section class="journey" aria-label="Entrez chez La Voisine en faisant défiler la page">
+      <div class="stage">
+        <div class="film">
+          <video id="hero" data-src="hero.mp4" poster="poster.jpg" preload="none" muted playsinline aria-label="Une visite de La Voisine, contrôlée par le défilement"></video>
+          <img id="hero-frame" src="frames/000.webp" alt="Une visite de La Voisine, contrôlée par le défilement" fetchpriority="high">
+          <div class="frame-loader" role="status" aria-live="polite"><span aria-hidden="true"></span><small>Chargement de l’entrée</small></div>
+          <div class="callouts" inert>
+            <aside class="restaurant-intro" aria-label="Bienvenue chez La Voisine">
+              <img class="restaurant-logo" src="la-voisine-logo.png" width="2048" height="1097" alt="La Voisine — Gastronomie de quartier">
+              <p>C’est un restaurant de quartier au caractère raffiné et accueillant. Notre cuisine s’inspire des grands classiques et célèbre des produits de qualité, servis dans un décor élégant, sans prétention, où l’on se sent rapidement comme à la maison.</p>
+              <!-- Google snapshot reported by RestoMontreal, 15 September 2026; not a live feed. -->
+              <div class="review-summary" title="Note Google rapportée par RestoMontreal au 15 septembre 2026">
+                <span class="rating-stars" aria-hidden="true">★★★★★</span>
+                <span class="rating-score" aria-label="Note de 4,4 sur 5">4,4</span><span class="review-count" aria-label="Plus de 60 avis">(60+)</span><img class="google-review-logo" src="google-logo.png" width="184" height="60" alt="Google">
+              </div>
+              <a class="google-reviews" href="https://www.google.com/maps/search/?api=1&amp;query=La+Voisine&amp;query_place_id=ChIJC1OoJRsByUwRquIOTP8c3ZM" target="_blank" rel="noopener">Voir les avis <span aria-hidden="true">↗</span></a>
+            </aside>
+            <a class="callout reservation-callout" href="https://booking.libroreserve.com/17721363282316f12bdd3/QC017721363289C8FD6/seat" target="_blank" rel="noopener"><span class="eyebrow">Une place chez nous</span><span class="callout-title">Réserver une table <span aria-hidden="true">↗</span></span><span class="pointer" aria-hidden="true"></span></a>
+            <button class="callout menu-callout" data-open="menu"><span class="eyebrow">À la carte</span><span class="callout-title">Découvrir le menu <span aria-hidden="true">↗</span></span><span class="pointer" aria-hidden="true"></span></button>
+          </div>
+        </div>
+        <button class="scroll-cue" aria-label="Faites défiler pour entrer chez La Voisine"><span class="scroll-label">Faites défiler pour entrer</span><svg viewBox="0 0 24 38" width="24" height="38" aria-hidden="true"><rect x="3" y="1" width="18" height="29" rx="9"/><path d="M12 7v7m-5 19 5 4 5-4"/></svg></button>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+  </main>
+  <dialog id="menu" aria-labelledby="menu-title">
+    <div class="panel-header"><span class="wordmark">La Voisine</span><button class="close" aria-label="Fermer le menu">×</button></div>
+    <div class="panel-content"><span class="eyebrow">À LA CARTE</span><h1 id="menu-title">Le plaisir de bien manger.</h1><div class="menu-pages"><a href="menu-entrees.png" target="_blank" rel="noopener" aria-label="Agrandir le menu des entrées"><img src="menu-entrees.png" alt="La Voisine — menu des entrées" loading="lazy"></a><a href="menu-plats.png" target="_blank" rel="noopener" aria-label="Agrandir le menu des plats"><img src="menu-plats.png" alt="La Voisine — menu des plats principaux" loading="lazy"></a></div><p class="fineprint">Nos menus peuvent changer au fil des saisons.</p></div>
+  </dialog>
+  <dialog id="contact" aria-labelledby="contact-title">
+    <div class="panel-header"><span class="wordmark">La Voisine</span><button class="close" aria-label="Fermer les coordonnées">×</button></div>
+    <div class="panel-content"><span class="eyebrow">SAINT-BRUNO-DE-MONTARVILLE</span><h1 id="contact-title">On se retrouve chez nous.</h1><div class="contact-grid"><div><h2>Nous rendre visite</h2><address>1473, rue de Montarville<br>Saint-Bruno-de-Montarville<br>Québec, J3V 3T6</address><a class="contact-link" href="tel:+14504414042">450 441-4042</a><a class="contact-link" href="mailto:info@restolavoisine.com">info@restolavoisine.com</a><a class="directions" href="https://www.google.com/maps/search/?api=1&query=1473+rue+de+Montarville+Saint-Bruno-de-Montarville+Quebec+J3V+3T6" target="_blank" rel="noopener">Itinéraire <span aria-hidden="true">↗</span></a></div><div><h2>Heures d’ouverture</h2><dl class="hours"><div><dt>Lundi</dt><dd>Fermé</dd></div><div><dt>Mardi & mercredi</dt><dd>10 h – 21 h</dd></div><div><dt>Jeudi & vendredi</dt><dd>10 h – 22 h</dd></div><div><dt>Samedi</dt><dd>11 h – 22 h</dd></div><div><dt>Dimanche</dt><dd>10 h – 15 h</dd></div></dl></div></div></div>
+  </dialog>
+  <noscript><div class="no-script"><a href="menu-entrees.png">Menu — entrées</a><a href="menu-plats.png">Menu — plats</a><a href="https://booking.libroreserve.com/17721363282316f12bdd3/QC017721363289C8FD6/seat">Réserver</a><a href="tel:+14504414042">450 441-4042</a></div></noscript>
+</body>
+</html>

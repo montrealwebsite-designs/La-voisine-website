@@ -1,0 +1,129 @@
+:root{color-scheme:dark;--green:#18372d;--deep:#10271f;--cream:#f3ecdc;--gold:#c9b88b;font-family:Georgia,'Times New Roman',serif;color:var(--cream);background:var(--deep)}
+*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}button{color:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:6px}button{border:0}body:has(dialog[open]){overflow:hidden}
+.navigation{position:fixed;z-index:10;top:26px;left:50%;transform:translate(-50%,-10px);display:flex;align-items:center;gap:24px;padding:16px 32px;border:1px solid #c9b88b70;outline:1px solid #c9b88b25;outline-offset:5px;background:#18372ded;box-shadow:0 6px 30px #0002;opacity:0;transition:opacity .6s,transform .6s;pointer-events:none;white-space:nowrap;font-size:16px;letter-spacing:.035em}
+.navigation button{padding:0;background:none}.navigation>span{color:var(--gold)}.navigation a:hover,.navigation button:hover{color:var(--gold)}.has-scrolled .navigation,.navigation:focus-within{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.journey{height:430svh}.stage{height:100svh;position:sticky;top:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--deep)}.film{position:relative;width:100%;height:100%}video{width:100%;height:100%;display:block;object-fit:cover;object-position:center}.callouts{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .85s,visibility .85s}.is-complete .callouts{opacity:1;visibility:visible}.callout{position:absolute;display:flex;flex-direction:column;align-items:flex-start;background:#18372df5;color:var(--cream);border:1px solid var(--gold);padding:18px 23px;text-align:left;box-shadow:0 8px 32px #0003;min-width:220px;transition:background .2s,transform .2s}.callout:before{content:'';position:absolute;inset:5px;border:1px solid #c9b88b42;pointer-events:none}.callout:hover{background:#244b3c;transform:translateY(-3px)}.eyebrow{font:12px/1.5 Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}.callout-title{font-size:21px;line-height:1.4;margin-top:5px;white-space:nowrap}.callout-title>span{display:inline-block;margin-left:16px;font-size:17px;color:var(--gold)}.pointer{position:absolute;left:50%;top:100%;height:44px;width:1px;background:var(--gold);pointer-events:none}.pointer:after{content:'';position:absolute;bottom:-4px;left:-3px;width:7px;height:7px;background:var(--cream);border-radius:50%;box-shadow:0 0 0 5px #c9b88b30}.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);padding:12px;background:#10271f55;border-radius:30px;transition:opacity .4s;line-height:0}.scroll-cue svg{fill:none;stroke:#f3ecdc;stroke-width:1.1}.is-complete .scroll-cue{opacity:0;pointer-events:none}.progress{position:absolute;bottom:0;left:0;width:100%;height:2px;background:#f3ecdc15}.progress span{display:block;height:100%;width:0;background:var(--gold)}
+dialog{padding:0;max-width:1120px;width:calc(100% - 64px);max-height:calc(100svh - 64px);border:1px solid #c9b88b80;background:var(--green);color:var(--cream);box-shadow:0 30px 100px #0007}dialog::backdrop{background:#081a14cc;backdrop-filter:blur(8px)}.panel-header{position:sticky;top:0;z-index:1;display:flex;justify-content:space-between;align-items:center;padding:22px 36px;background:var(--green);border-bottom:1px solid #c9b88b40}.wordmark{font-size:28px;font-style:italic}.close{font:32px/1 Georgia;background:transparent;width:44px;height:44px;color:var(--gold)}.panel-content{padding:42px 48px 32px}h1{font-size:clamp(30px,4vw,48px);font-weight:400;line-height:1.15;margin:12px 0 36px;letter-spacing:-.025em}h2{font-weight:400;font-size:25px;margin:0 0 23px}.menu-pages{display:grid;grid-template-columns:1fr 1fr;gap:24px}.menu-pages img{display:block;width:100%;height:auto;background:#f6f4ed}.fineprint{font-size:14px;color:#d1d2bf;margin-top:24px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;padding-bottom:28px}address{font-style:normal;font-size:18px;line-height:1.65;margin-bottom:22px}.contact-link{display:block;width:fit-content;font-size:17px;line-height:1.7}.contact-link:hover{text-decoration:underline}.directions{display:inline-block;border-bottom:1px solid var(--gold);padding:0 0 8px;margin-top:24px;color:var(--gold);font-size:16px}.directions span{margin-left:24px}.hours{font-size:16px;margin:0}.hours>div{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid #c9b88b30}.hours>div:first-child{padding-top:0}.hours dd{margin:0;white-space:nowrap}.no-script{position:fixed;bottom:0;display:flex;gap:20px;background:var(--green);padding:20px}
+@media(max-width:700px){.navigation{top:21px;padding:14px 23px;gap:19px;font-size:15px}.film{height:auto;aspect-ratio:1916/1080;width:100%}video{object-fit:contain}.callout{padding:13px 15px;min-width:0}.callout-title{font-size:17px;white-space:normal}.callout-title>span{margin-left:7px}.callout .eyebrow{font-size:10px;letter-spacing:.13em}.scroll-cue{bottom:38px}dialog{width:calc(100% - 24px);max-height:calc(100svh - 28px)}.panel-header{padding:12px 20px}.panel-content{padding:30px 22px}.menu-pages,.contact-grid{grid-template-columns:1fr;gap:32px}.contact-link{overflow-wrap:anywhere}.wordmark{font-size:25px}.journey{height:350svh}}
+@media(max-width:700px),(max-aspect-ratio:4/3){.film{width:min(100%,calc((100svh - 270px)*1.774));height:auto;aspect-ratio:1916/1080}video{object-fit:contain}.callout{padding:13px 15px;min-width:0}.callout-title{font-size:17px;white-space:normal}.callout-title>span{margin-left:7px}.callout .eyebrow{font-size:12px;letter-spacing:.1em}}
+/* A lighter, contemporary interface around the cinematic scene. */
+:root{--cream:#f5f7f2;--gold:#c5d8c7;font-family:Inter,'Segoe UI',Arial,sans-serif}
+.navigation{gap:4px;padding:5px;border:1px solid #ffffff24;outline:none;border-radius:100px;background:#14382de0;backdrop-filter:blur(20px);box-shadow:0 8px 28px #061a2426;font-size:14px;font-weight:500;letter-spacing:0}
+.navigation>span{display:none}.navigation button,.navigation>a{padding:11px 19px;border-radius:100px;transition:background .2s,color .2s}.navigation button:hover,.navigation>a:hover{background:#ffffff14;color:#fff}
+.callout{min-width:0;padding:11px 15px;border:1px solid #ffffff30;border-radius:18px;background:#173d30eb;backdrop-filter:blur(16px);box-shadow:0 6px 22px #051d2929}.callout:before,.callout .eyebrow{display:none}.callout-title{display:flex;align-items:center;gap:12px;margin:0;font-family:Inter,'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:500;line-height:22px;white-space:nowrap}.callout-title>span{margin:0;font-size:15px;color:#d4e6d7}.callout:hover{background:#265340;transform:translateY(-2px)}.pointer{background:#d4e6d79e}.pointer:after{width:5px;height:5px;left:-2px;box-shadow:0 0 0 4px #d4e6d720}
+dialog{border:1px solid #ffffff20;border-radius:28px;background:#16392d;box-shadow:0 24px 100px #0005}.panel-header{background:#16392df5;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12;padding:18px 30px}.wordmark{font-family:Georgia,'Times New Roman',serif;font-size:26px}.close{display:grid;place-items:center;border-radius:50%;background:#ffffff0c;color:#e8f1e8;font-family:Arial,sans-serif;font-size:25px;transition:background .2s}.close:hover{background:#ffffff1c}.panel-content{padding:36px 38px 28px}h1{font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.045em;line-height:1.2;margin-bottom:30px}h2{font-size:20px;font-weight:500;letter-spacing:-.025em}.eyebrow{letter-spacing:.12em}.menu-pages{gap:20px}.menu-pages a{border-radius:16px;overflow:hidden;display:block;box-shadow:0 4px 20px #0002}.menu-pages img{border-radius:16px}.fineprint{color:#bacac0}.directions{border:1px solid #ffffff25;border-radius:100px;padding:11px 18px;font-size:14px;color:var(--cream)}.directions:hover{background:#ffffff0c}.hours>div{border-color:#ffffff16}address{font-size:16px}.contact-link{font-size:16px}
+@media(max-width:700px){.navigation{padding:4px;gap:2px;font-size:14px}.navigation button,.navigation>a{padding:10px 16px}.callout{padding:10px 13px;border-radius:16px}.callout-title{font-size:14px;gap:8px}.panel-header{padding:14px 20px}.panel-content{padding:28px 22px}dialog{border-radius:22px}.menu-pages a,.menu-pages img{border-radius:12px}}
+/* Open navigation and softly tinted glass, with no enclosing menu frame. */
+.navigation{top:28px;gap:32px;padding:0 14px;border:0;border-radius:0;background:transparent;backdrop-filter:none;box-shadow:none;font-size:15px;font-weight:500;letter-spacing:.015em}
+.navigation button,.navigation>a{position:relative;padding:12px 2px;border-radius:0;background:transparent;color:#fff9ed;text-shadow:0 1px 12px #071e16,0 1px 3px #071e16;transition:color .25s}
+.navigation button:after,.navigation>a:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.navigation button:first-child{color:#d5ead5}.navigation>a{color:#ffdab4}.navigation button:last-child{color:#e3e4f8}.navigation button:hover,.navigation>a:hover{background:transparent;color:#fff}.navigation button:hover:after,.navigation>a:hover:after{transform:scaleX(1)}
+.callout{padding:10px 14px;border:1px solid #ffffff55;border-radius:18px;background:linear-gradient(125deg,#c7e6d552,#254d3b73);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%);box-shadow:inset 0 1px 0 #ffffff30,0 8px 24px #071a1620;color:#fffaf0}
+.reservation-callout{background:linear-gradient(125deg,#ecc3a65c,#5a49375c)}.callout:hover{background:linear-gradient(125deg,#c7e6d579,#254d3b91)}.reservation-callout:hover{background:linear-gradient(125deg,#ecc3a680,#5a493780)}
+.callout-title{font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:400;letter-spacing:-.02em;gap:15px;text-shadow:0 1px 6px #10271f90}.callout-title>span{font-family:Arial,sans-serif;font-size:14px;color:#e0f0df}.reservation-callout .callout-title>span{color:#ffe2bc}
+dialog{position:fixed;inset:0;margin:0;width:100%;max-width:none;height:100svh;max-height:none;border:0;border-radius:0;background:transparent;box-shadow:none;color:#fff8e9}
+dialog::backdrop{background:linear-gradient(125deg,#0c342bd9,#193b39cc 58%,#544135c4);backdrop-filter:blur(24px) saturate(115%);-webkit-backdrop-filter:blur(24px) saturate(115%)}
+.panel-header{position:relative;max-width:1260px;margin:auto;padding:28px 48px;background:transparent;backdrop-filter:none;border:0}.wordmark{font-size:29px;color:#e3eccf}.close{flex:0 0 44px;inline-size:44px;block-size:44px;min-inline-size:44px;max-inline-size:44px;padding:0;aspect-ratio:1;border-radius:50%;background:#ffffff0a;border:1px solid #ffffff24;color:#fff0d9}.close:hover{background:#ffffff20}
+.panel-content{max-width:1260px;margin:auto;padding:24px 48px 48px}.panel-content>.eyebrow{color:#e2c29f;font-size:12px;letter-spacing:.2em}h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,4.8vw,64px);font-weight:400;line-height:1.08;letter-spacing:-.04em;margin:18px 0 42px}h2{color:#d5e9d3}.menu-pages{gap:32px}.menu-pages a,.menu-pages img{border-radius:6px}.menu-pages a{box-shadow:0 18px 44px #071e1633}.fineprint{color:#e0e4d5}.contact-grid{padding-top:10px}.hours>div{border-color:#ffffff20}.directions{background:#d3b38d12;border-color:#e2c29f50;color:#ffe1b9}
+@media(max-width:700px){.navigation{top:22px;gap:28px;padding:0 8px;font-size:14px}.navigation button,.navigation>a{padding:12px 0}.callout{padding:10px 13px;border-radius:16px}.callout-title{font-size:16px;gap:12px}dialog{width:100%;max-height:100svh;border-radius:0}.panel-header{padding:24px}.panel-content{padding:18px 24px 36px}h1{margin-bottom:30px}.menu-pages{gap:24px}.menu-pages a,.menu-pages img{border-radius:5px}}
+.navigation{gap:28px;padding:4px 24px;border:1px solid #edd39b24;border-radius:100px;background:#163c2f4d;backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%);box-shadow:inset 0 1px 0 #fff4d90d,0 6px 24px #071e1612}
+.navigation button,.navigation>a,.navigation button:first-child,.navigation button:last-child{color:#efd59d;text-shadow:0 1px 6px #071e16a0}.navigation button:hover,.navigation>a:hover{color:#fff0c9;background:transparent}
+@media(max-width:700px){.navigation{gap:24px;padding:3px 22px}}
+html,body,dialog{scrollbar-width:none}html::-webkit-scrollbar,body::-webkit-scrollbar,dialog::-webkit-scrollbar{display:none;width:0;height:0}
+#hero{display:none}#hero-frame{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+.frame-loader{position:absolute;inset:0;z-index:4;display:grid;place-content:center;justify-items:center;gap:12px;background:#10271fe8;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s,visibility .25s}.frame-loader span{width:28px;height:28px;border:2px solid #f3ecdc40;border-top-color:#efd59d;border-radius:50%;animation:frame-spin .8s linear infinite}.frame-loader small{font:500 12px/1.2 Inter,'Segoe UI',Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f3ecdc}.is-frame-loading .frame-loader{opacity:1;visibility:visible;pointer-events:auto}.is-frame-loading{overflow:hidden}@keyframes frame-spin{to{transform:rotate(1turn)}}
+.callout{box-shadow:0 12px 28px #07151066,0 3px 8px #07151040,inset 0 1px 0 #ffffff38}
+.callout-title>span{display:none}.callouts{transition:none}.pointer[hidden]{display:none}
+@media(max-width:700px),(max-aspect-ratio:4/3){.film{width:100%;height:min(76svh,calc((100vw - 32px)*1.945));aspect-ratio:auto}#hero{display:none}#hero-frame{display:block}.journey{height:360svh}.stage{touch-action:pan-y}.scroll-cue{bottom:14px}.callout-title{font-size:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}.journey{height:100svh}.scroll-cue{display:none}}
+
+/* Restaurant introduction enters with the scene's two callouts. */
+.navigation,.has-scrolled .navigation{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.navigation.is-idle{opacity:0;transform:translate(-50%,-8px);pointer-events:none}
+.navigation:focus-within{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.restaurant-intro{position:absolute;right:4.2%;top:19%;width:33%;max-height:72%;overflow:auto;padding:clamp(20px,2.4vw,38px);border:1px solid #fff4dc35;border-radius:20px;background:linear-gradient(135deg,#14382deb,#18372dd9);box-shadow:0 18px 48px #061c1640;color:#fff9ef}
+.restaurant-logo{display:block;width:70%;max-width:250px;height:auto;margin:0 auto 22px}
+.restaurant-intro p{font:400 clamp(16px,1.3vw,19px)/1.65 Georgia,'Times New Roman',serif;margin:0;text-wrap:pretty}
+.google-reviews{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;padding-top:17px;border-top:1px solid #efd59d40;font:500 14px/1.5 Inter,'Segoe UI',Arial,sans-serif;color:#efd59d}
+.google-reviews:hover{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px),(max-aspect-ratio:4/3){
+  .restaurant-intro{top:0;right:16px;width:calc(100% - 32px);max-height:calc(100% - 142px);padding:20px 24px;border-radius:18px;background:#14382dec}
+  .restaurant-logo{width:150px;max-width:45%;margin-bottom:14px}
+  .restaurant-intro p{font-size:16px;line-height:1.5}
+  .google-reviews{margin-top:15px;padding-top:12px}
+}
+@media(max-height:600px) and (min-aspect-ratio:4/3){
+  .restaurant-intro{top:18%;max-height:77%;padding:18px 22px}
+  .restaurant-logo{width:135px;margin-bottom:12px}
+  .restaurant-intro p{font-size:16px;line-height:1.45}
+  .google-reviews{margin-top:12px;padding-top:10px}
+}
+
+
+/* Shared restaurant surface for the introduction and its actions. */
+.restaurant-intro,.callout,.navigation{background:linear-gradient(135deg,#14382deb,#18372dd9);border:1px solid #fff4dc35;box-shadow:0 18px 48px #061c1640;color:#fff9ef}
+.callout{border-radius:20px;backdrop-filter:none;-webkit-backdrop-filter:none}
+.callout:hover,.reservation-callout:hover{background:linear-gradient(135deg,#1c493cf5,#204737ed)}
+.callout-title{color:#fff9ef;text-shadow:none}
+.review-summary{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:22px;padding-top:17px;border-top:1px solid #efd59d40;font:400 14px/1.5 Inter,'Segoe UI',Arial,sans-serif}
+.rating-stars{position:relative;display:inline-block;font:20px/1.2 Arial,sans-serif;letter-spacing:2px;white-space:nowrap;color:#ffffff35}
+.rating-fill{position:absolute;inset:0 auto 0 0;width:88%;overflow:hidden;color:#efd59d}
+.rating-score{font-weight:600;color:#efd59d}.review-count{color:#d4dece}
+.review-summary+.google-reviews{justify-content:flex-start;border:0;margin-top:10px;padding-top:0}
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:12px;width:max-content;max-width:calc(100% - 32px);padding:15px 24px;background:#10271f99;border:1px solid #fff4dc25;border-radius:20px;color:#fff9ef}
+.scroll-label{font:400 16px/1.5 Georgia,'Times New Roman',serif;letter-spacing:.06em;text-align:center}
+.scroll-cue svg{width:18px;height:29px}
+.has-scrolled .scroll-cue{opacity:0;pointer-events:none}
+@media(max-width:700px),(max-aspect-ratio:4/3){.restaurant-intro,.callout{background:#14382dec;border-radius:18px}.scroll-cue{bottom:20px;gap:8px;padding:12px 20px}.scroll-label{font-size:15px}.review-summary{margin-top:16px;padding-top:13px}}
+@media(prefers-reduced-motion:reduce){.scroll-cue{display:none}}
+
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500;font-display:swap;src:url('caveat-medium.ttf') format('truetype')}
+.scroll-cue{background:#14382dfa;border:1px solid #efd59d70;box-shadow:0 10px 32px #0007;padding:16px 30px;color:#efd59d}
+.scroll-label{font-family:'Caveat','Segoe Script',cursive;font-size:30px;font-weight:500;line-height:1.25;letter-spacing:0;color:#efd59d}
+.scroll-cue svg{stroke:#efd59d}
+.review-summary{gap:12px;flex-wrap:wrap}
+.rating-stars{color:#efd59d;font-size:20px;letter-spacing:1px}
+.rating-score{font-size:20px;font-weight:700;color:#fff9ef}
+.review-count{font-size:16px;color:#d4dece}
+.google-review-logo{display:block;width:62px;height:auto;flex-shrink:0}
+@media(max-width:700px){.scroll-cue{padding:14px 24px}.scroll-label{font-size:28px}.review-summary{gap:9px}.google-review-logo{width:55px}}
+
+/* Restrained typography and a cohesive final-frame composition. */
+.scroll-label{font:500 14px/1.5 Inter,'Segoe UI',Arial,sans-serif;letter-spacing:.015em;color:#efd59d}
+.scroll-cue{padding:12px 22px;gap:9px;border-radius:14px;border-color:#efd59d40;box-shadow:0 6px 24px #0004}
+.scroll-cue svg{width:16px;height:25px}
+.restaurant-intro{right:4.5%;top:17%;width:34%;max-height:76%;padding:clamp(24px,2.7vw,42px);border-color:#efd59d30;border-radius:12px;background:linear-gradient(145deg,#123329f5,#142e26ed);box-shadow:0 14px 36px #061c1633}
+.restaurant-logo{width:66%;max-width:210px;margin-bottom:24px}
+.restaurant-intro p{font-size:clamp(16px,1.18vw,18px);line-height:1.65;color:#eeeade}
+.callout{padding:12px 19px;min-height:46px;border-radius:12px;border-color:#efd59d45;background:linear-gradient(145deg,#123329f5,#142e26ed);box-shadow:0 8px 24px #061c1633}
+.callout-title{font-size:16px;line-height:22px;letter-spacing:0;color:#f5edda}
+.pointer{opacity:.65}.pointer:after{box-shadow:none}
+.review-summary{gap:8px;margin-top:22px;padding-top:17px;border-color:#efd59d25}
+.rating-stars{font-size:15px;letter-spacing:.5px}
+.rating-score{font-size:14px;font-weight:600}
+.review-count{font-size:13px}
+.google-review-logo{width:46px}
+.review-summary+.google-reviews{font-size:14px;margin-top:8px;color:#cfbd92}
+@media(max-width:700px),(max-aspect-ratio:4/3){
+  .callouts{inset:0 16px;display:flex;flex-direction:column;gap:10px;padding:22px;border:1px solid #efd59d30;border-radius:14px;background:linear-gradient(145deg,#123329f5,#142e26f2);box-shadow:0 14px 36px #061c1640}
+  .restaurant-intro{position:relative;top:auto;right:auto;width:100%;max-height:none;min-height:0;flex:1 1 auto;padding:0 0 12px;border:0;border-radius:0;background:transparent;box-shadow:none;overscroll-behavior:contain}
+  .restaurant-logo{width:150px;max-width:65%;margin:0 auto 19px}
+  .restaurant-intro p{font-size:16px;line-height:1.55}
+  .callout{position:static;left:auto!important;top:auto!important;flex:0 0 auto;width:100%;align-items:center;justify-content:center;padding:11px 14px;min-height:46px;border-radius:8px;background:#ffffff04;box-shadow:none}
+  .reservation-callout{background:#c9b88b12;border-color:#efd59d55}
+  .callout-title{font-size:16px}.pointer{display:none}
+  .review-summary{margin-top:18px;padding-top:14px;gap:8px}
+  .google-reviews>span{display:none}
+  .scroll-label{font-size:14px}.scroll-cue{padding:12px 20px}
+}
+@media(max-height:600px) and (min-aspect-ratio:4/3){
+  .restaurant-intro{padding:20px 24px;top:17%;max-height:78%}
+  .restaurant-logo{width:130px;margin-bottom:14px}
+  .restaurant-intro p{font-size:16px;line-height:1.45}
+  .review-summary{margin-top:15px;padding-top:12px}
+}
+
+/* French navigation with understated vertical separators. */
+.navigation{gap:16px}
+.navigation>span{display:block;color:#efd59d;opacity:.5;font-size:14px;font-weight:400}
+@media(max-width:700px){.navigation{gap:12px;padding-inline:20px}}
